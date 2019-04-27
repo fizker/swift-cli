@@ -1,14 +1,16 @@
 import Foundation
 
 public class CLI {
+	private let name:String?
 	private let commands:[Command.Type]
 
-	public init(commands:[Command.Type]) {
+	public init(name:String? = nil, commands:[Command.Type]) {
+		self.name = name
 		self.commands = commands
 	}
 
 	public func evaluate(arguments:[String]) {
-		guard let name = arguments.first
+		guard let name = self.name ?? arguments.first
 		else { return }
 
 		guard arguments.count > 1
