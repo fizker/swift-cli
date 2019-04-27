@@ -6,20 +6,20 @@ let package = Package(
 	name: "swift-cli",
 	products: [
 		.library(
-			name: "cli",
-			targets: ["cli"]
+			name: "FzkCLI",
+			targets: ["FzkCLI"]
 		),
 	],
 	dependencies: [
 	],
 	targets: [
 		.target(
-			name: "cli",
+			name: "FzkCLI",
 			dependencies: []
 		),
 		.testTarget(
 			name: "cliTests",
-			dependencies: ["cli"]
+			dependencies: ["FzkCLI"]
 		),
 	]
 )
